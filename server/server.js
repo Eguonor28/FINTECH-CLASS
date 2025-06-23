@@ -5,7 +5,7 @@ import path from "path";
 import { fileURLToPath } from "url";
 import connectDB from "./config/db.js";
 import authRoutes from "./routes/authRoutes.js";
-// import incomeRoutes from "./routes/incomeRoutes.js";
+import incomeRoutes from "./routes/incomeRoutes.js";
 // import expensesRoutes from "./routes/expenseRoutes.js";
 // import dashboardRoutes from "./routes/dashboardRoutes.js";
 
@@ -13,7 +13,7 @@ const _filename = fileURLToPath(import.meta.url);
 const _dirname = path.dirname(_filename);
 
 const app = express();
-app.use(express.json);
+app.use(express.json());
 
 // CORS middleware - fixed headers and methods
 app.use(
@@ -31,7 +31,7 @@ connectDB();
 // Api Routes
 
 app.use("/api/auth", authRoutes);
-// app.use("/api/income", incomeRoutes)
+app.use("/api/income", incomeRoutes);
 // app.use("/api/expenses", expenseRoutes);
 // app.use("/api/dahsboard", dashboardRoutes)
 

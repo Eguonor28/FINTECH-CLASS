@@ -7,3 +7,6 @@ express: is a node.js framework that is used to build rest api
 jsonwebtoken: is used to verify user id or info as token to acess the app
 mongos: this is an odm, object data modeling platform
 multer: is used to handle upload
+
+Postman: is used to document backend
+used to test post and get api

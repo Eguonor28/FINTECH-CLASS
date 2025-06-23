@@ -60,6 +60,11 @@ const loginUser = async (req, res) => {
     if (!user || !(await user.comparePassword(password))) {
       return res.status(400).json({ message: "Invalid login credentials" });
     }
+    res.status(200).json({
+      id: user._id,
+      user,
+      token: generateToken(user.id),
+    });
   } catch (err) {
     res
       .status(500)
