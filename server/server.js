@@ -29,6 +29,9 @@ app.use(
 connectDB();
 
 // Api Routes
+app.get("/", (req, res) => {
+  res.json({ message: "Hello from Vercel!" });
+});
 
 app.use("/api/auth", authRoutes);
 app.use("/api/income", incomeRoutes);

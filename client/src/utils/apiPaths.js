@@ -1,4 +1,4 @@
-export const BASE_URL = "http://fintech-class-xi.vercel.app/";
+export const BASE_URL = "https://fintech-class-xi.vercel.app";
 export const API_PATHS = {
   AUTH: {
     LOGIN: "/api/auth/login",
