@@ -6,8 +6,8 @@ import { fileURLToPath } from "url";
 import connectDB from "./config/db.js";
 import authRoutes from "./routes/authRoutes.js";
 import incomeRoutes from "./routes/incomeRoutes.js";
-// import expensesRoutes from "./routes/expenseRoutes.js";
-// import dashboardRoutes from "./routes/dashboardRoutes.js";
+import expenseRoutes from "./routes/expenseRoutes.js";
+import dashboardRoutes from "./routes/dashboardRoutes.js";
 
 const _filename = fileURLToPath(import.meta.url);
 const _dirname = path.dirname(_filename);
@@ -32,8 +32,8 @@ connectDB();
 
 app.use("/api/auth", authRoutes);
 app.use("/api/income", incomeRoutes);
-// app.use("/api/expenses", expenseRoutes);
-// app.use("/api/dahsboard", dashboardRoutes)
+app.use("/api/expense", expenseRoutes);
+app.use("/api/dashboard", dashboardRoutes);
 
 //Error handling middleware (recommended addition)
 app.use((err, req, res, next) => {

@@ -1,3 +1,22 @@
+@import "tailwindcss";
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+@theme{
+  --font-display:"Helvetica","sans-serif"
+  --primary-color:#4169e1;
+}
+
+
+@layer base {
+  html {
+    font-family: var(--font-display);
+  }
+
+  body {
+    background-color: #fcfbfc;
+    overflow-x: hidden;
+  }
 }
