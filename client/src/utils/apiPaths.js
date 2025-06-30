@@ -1,5 +1,11 @@
-export const BASE_URL = "http://localhost:5000";
-export const API_PATHS = {};
+export const BASE_URL = "http://fintech-class-xi.vercel.app/";
+export const API_PATHS = {
+  AUTH: {
+    LOGIN: "/api/auth/login",
+    REGISTER: "/api/auth/register",
+    GET_USER_INFO: "/api/auth/getUser",
+  },
+};
 
 // auth
 // login
